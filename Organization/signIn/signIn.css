@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Chonburi&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+
+}
+body{
+    background: hsla(0, 73%, 82%, 0.2);
+}
+#signin-Container{
+    background: hsl(0, 0%, 100%);
+    width: 90%;
+    max-width: 400px;
+    margin: 35px auto 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+h2{
+    text-align: center;
+    font-family: 'Chonburi', cursive;
+}
+p{
+    text-align: center;
+    margin: 10px auto;
+}
+
+form{
+    margin: 25px auto 0 ;
+    text-align: left;
+}
+input{
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 10px auto 15px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 10px;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button{
+    color: hsl(0, 0%, 100%);
+    background:hsla(180, 100%, 25%, 1);
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-radius: 7px;
+    margin: 10px auto 0;
+    cursor: pointer;
+}
+button:hover{
+    color:hsl(0, 0%, 100%);
+    background: hsl(230, 8%, 15%); 
+}
+
+.hr-lines:before{
+    content:" ";
+    display: block;
+    height: 1px;
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background:hsl(0, 0%, 0%);
+  }
+
+  .hr-lines{
+    position: relative;
+    max-width: 500px;
+    margin: 30px auto 10px;
+    text-align: center;
+  }
+
+  .hr-lines:after{
+    content:" ";
+    height: 1px;
+    width: 70px;
+    background: hsl(0, 0%, 0%);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+  i{
+    font-size: 35px;
+    cursor: pointer;
+    color: blue;
+  }
+
+  .bxl-google{
+    background: linear-gradient(to right, #0000FF,
+    #EA4335, #FBBC05, #34A853);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }

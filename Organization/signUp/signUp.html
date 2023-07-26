@@ -13,14 +13,20 @@
             <h2>Company Sign Up</h2>
             <p>It is essential to be in the company residence while registering.</p>
 
-            <form action="">
+            <form action="" id="form">
 <label for="companyName">Company Name</label>
-<input type="text" id="companyName" name="companyName"  placeholder="Enter Company's Name" value="">
+<input type="text" id="companyName" name="companyName"  placeholder="Enter Company's Name" value="" required>
 <label for="companyEmail">Company's Email Address</label>
-<input type="email" id="companyEmail" name ="companyEmail" value="" placeholder="Enter Company's Email Address">
+<input type="email" id="companyEmail" name ="companyEmail" value="" placeholder="Enter Company's Email Address" required>
 <label for="password">Password</label>
-<input type="password" id="companyPassword" name ="companyPassword" value="" placeholder="Enter password">
-<button type="button">Continue</button>
+<input type="password" id="companyPassword" name ="companyPassword" value="" placeholder="Enter password" required>
+<div id="termsOfService"><input type="checkbox" name="checkbox" id="checkbox">
+     <p>  By Signing Up,  you  agree to the 
+        <strong> CLOCKIN Terms Of Service and Privacy Policy</strong></p>
+    </div>
+
+<button type="submit" id="continue">Continue</button>
+<p>Already have an account? <em>Log In</em></p>
             </form>
         </div>
     </main>
