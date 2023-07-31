@@ -9,7 +9,7 @@
 
 }
 body{
-    background: hsla(0, 73%, 82%, 0.2);
+    background:hsl(180, 33%, 88%);
 }
 #signin-Container{
     background: hsl(0, 0%, 100%);
