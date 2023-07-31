@@ -8,7 +8,7 @@
 
 }
 body{
-    background: hsla(0, 73%, 82%, 0.2);
+    background:hsl(180, 33%, 88%);
 }
 #signup-Container{
     background: hsl(0, 0%, 100%);
@@ -44,7 +44,7 @@ input{
     padding: 10px;
 }
 label{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -76,6 +76,10 @@ button:hover{
 
 strong{
     cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
 }
 
 strong:hover{
