@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signIn.css">
-    <title>SignIn</title>
+    <script src="https://kit.fontawesome.com/4e2a85ff85.js" crossorigin="anonymous"></script>
+        <title>SignIn</title>
 </head>
 <body>
-    
+    <main>
+        <div id="signup-Container">
+            <h2>Log In</h2>
+            <p>Log into your user dashboard</p>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email" value="" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value="" placeholder="Enter password" required>
+                <label for="companyId">Company ID</label>
+                <input type="text, number" id="companyId" name="companyId" value="" placeholder="Input 5 digit code" required>
+                <p class="Forgotten">Forgotten password</p>
+                <button type="submit" id="continue">Login</button>
+            </form>
+            <h3 class="hr-lines">or continue with</h3>
+            <div class="media">
+                <i class="fa-brands fa-google" style="color: #0f0f10;"></i>
+                <i class="fa-brands fa-facebook" style="color: #0e27e1;"></i>
+
+            </div>  
+        </div>
+    </main>
+    <script src="./signIn.js"></script>
 </body>
 </html>
