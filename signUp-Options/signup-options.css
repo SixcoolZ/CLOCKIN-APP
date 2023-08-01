@@ -8,7 +8,7 @@
 
 }
 body{
-    background: hsla(0, 73%, 82%, 0.2);
+    background:hsl(180, 33%, 88%);
 }
 #signupOption-Container{
     background: hsl(0, 0%, 100%);
@@ -24,7 +24,7 @@ body{
 h1{
     font-family: 'Chonburi', cursive;
     font-size: 45px;
-    letter-spacing: 5px;
+  
 }
 p{
     margin: 35px auto 100px;
