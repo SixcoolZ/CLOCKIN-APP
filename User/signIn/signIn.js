@@ -1,11 +1,44 @@
-function validate(){
-    let username = document.getElementById(email).value;
-    let password = document.getElementById(password).value;
-    let companyId = document.getElementById(companyid).value;
+const form = document.getElementById('form')
 
-    if(email === "" && password === ""){
-        alert('login successfully');
-    }else{
-        alert('Login failed')
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const formInputs = e.currentTarget;
+    const formData = new FormData(formInputs);
+    const data = Object.fromEntries(formData.entries());
+    
+//  console.log({data})
+
+    if(password.value.length < 6 || password.value.length > 18){
+        alert("Your password must be less than 18 charcters  \n and greater than 5 characters");
     }
+
+    else{
+            SignIn(data)
+        
+    }
+
+})
+
+
+   function SignIn(data){
+    fetch("https://clockin-be.onrender.com/auth/signin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        body: JSON.stringify(data)
+    }).then((res) => res.json())
+    .then(data => {
+        console.log({data})
+        localStorage.setItem("token", data.token)
+        localStorage.setItem("email", data.user.email)
+        if(data.token){
+            window.location.replace("/User/dashboard/dashboard.html") 
+
+        }
+        else{
+            window.location.href = "/";
+
+        }
+    })
 }
+
+
