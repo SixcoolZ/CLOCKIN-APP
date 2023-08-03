@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #d7ebebee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userdashboard{
+    background: #ffffff;
+    width: 400px;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.user-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-header h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+.user-header p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.user-icons{
+    margin-top: -1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.fa-bell{
+    font-size: 30px;
+}
+.user-profile-img{
+    width: 30px;
+}
+.usercontents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+.user-content{
+    background: #B0D8D8;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.user-content1{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.user-content1 .fa-right-to-bracket{
+    background: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 0.4rem;
+}
+.user-content1 p{
+    font-size: 18px;
+    font-weight: 400;
+}
+#content1-time{
+    font-size: 20px;
+    font-weight: 500;
+}
+.user-content2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.user-content2 .fa-arrow-right-from-bracket{
+    background: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 0.4rem;
+}
+.user-content2 p{
+    font-size: 18px;
+    font-weight: 400;
+}
+#checkin-details{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0.5rem
+}
+#checkin-count{
+    font-size: 16px;
+    font-weight: 700;
+}
+#checkout-details{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0.5rem
+}
+#checkout-count{
+    font-size: 16px;
+    font-weight: 700;
+}
+.user-activities{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-activities h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.activity-details{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.activity-details p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.user-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dashboard{
+    text-align: center;
+    cursor: pointer;
+}
+.user-signin{
+    text-align: center;
+    cursor: pointer;
+}
+.user-signout{
+    text-align: center;
+    cursor: pointer;
+}
+.user-profile{
+    text-align: center;
+    cursor: pointer;
+}

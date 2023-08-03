@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Chonburi&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+
+}
+body{
+    background:	hsl(180, 33%, 88%);
+}
+
+#fullDashbord{
+    background: hsl(0, 0%, 100%);
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto 20px;
+    padding: 25px;
+    border-radius: 10px;
+    /* text-align: center; */
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+#header h2{
+    text-align: center;
+    font-family: 'Chonburi', cursive;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+}
+#leftHeader{
+    display: flex;
+    gap: 20px;
+}
+#leftHeader img{
+    width: 50px;
+    border-radius: 50%;
+}
+#leftHeader i{
+    font-size: 50px;
+    top: 0;
+    margin-top: 0;
+}
+
+
+
+  #features {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    padding: 10px;
+    margin: 25px auto 0;
+    
+ }
+  
+ #features > div {
+    text-align: left;
+    padding: 20px 20px 10px;
+    border: 2px solid hsl(0, 0%, 0%);
+    border-radius: 15px;
+   
+  }
+  
+  .item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .item1 i{
+    color:hsla(180, 100%, 25%, 1);
+    font-size: 50px;  
+  }
+  .item1 p{
+    margin: 10px auto;
+    font-size: 20px;
+  }
+
+  #dailySignIns{
+    display:flex;
+    justify-content: space-between;
+    margin: 25px auto 0;
+  }
+  #displaySignIns{
+    display: flex;
+    gap: 5px;
+  }
+  #displaySignIns i{
+    font-size: 25px;
+    cursor: pointer;
+  }
