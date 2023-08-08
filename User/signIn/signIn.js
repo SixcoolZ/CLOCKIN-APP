@@ -6,7 +6,7 @@ form.addEventListener("submit", function(e){
     const formData = new FormData(formInputs);
     const data = Object.fromEntries(formData.entries());
     
-//  console.log({data})
+ console.log({data})
 
     if(password.value.length < 6 || password.value.length > 18){
         alert("Your password must be less than 18 charcters  \n and greater than 5 characters");
@@ -29,9 +29,9 @@ form.addEventListener("submit", function(e){
     .then(data => {
         console.log({data})
         localStorage.setItem("token", data.token)
-        localStorage.setItem("email", data.user.email)
+        localStorage.setItem("email", data.email)
         if(data.token){
-            window.location.replace("/User/dashboard/dashboard.html") 
+            window.location.href = ("/User/dashboard/dashboard.html");
 
         }
         else{
@@ -40,5 +40,18 @@ form.addEventListener("submit", function(e){
         }
     })
 }
+
+
+
+
+
+// <button id="signinButton">Go to Signin</button>
+
+// <script>
+// document.getElementById("signinButton").addEventListener("click", function() {
+//   // Redirect to the signin page
+//   window.location.href = "https://example.com/signin";
+// });
+// </script>
 
 
