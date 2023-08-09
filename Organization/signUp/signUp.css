@@ -145,3 +145,7 @@ em:hover{
 #beforeDashboad button{
     margin: 70px auto 50px;
 }
+
+.companyLocation{
+    display: none;
+}
