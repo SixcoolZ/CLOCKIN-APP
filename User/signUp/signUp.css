@@ -93,3 +93,6 @@ form h3 span{
   form .text h3 a:hover{
     text-decoration: underline;
   }
+  form .company-location{
+    display: none;
+  }

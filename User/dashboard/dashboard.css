@@ -68,6 +68,11 @@ body{
     font-size: 18px;
     padding: 0.4rem;
 }
+.user-content1 .fa-right-to-bracket:hover{
+    cursor: pointer;
+    background-color: #B0D8D8;
+    color: #ffffff;
+}
 .user-content1 p{
     font-size: 18px;
     font-weight: 400;
@@ -87,6 +92,11 @@ body{
     border-radius: 50px;
     font-size: 18px;
     padding: 0.4rem;
+}
+.user-content2 .fa-arrow-right-from-bracket:hover{
+    cursor: pointer;
+    background-color: #B0D8D8;
+    color: #ffffff;
 }
 .user-content2 p{
     font-size: 18px;
