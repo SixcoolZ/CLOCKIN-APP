@@ -45,13 +45,5 @@ form.addEventListener("submit", function(e){
 
 
 
-// <button id="signinButton">Go to Signin</button>
-
-// <script>
-// document.getElementById("signinButton").addEventListener("click", function() {
-//   // Redirect to the signin page
-//   window.location.href = "https://example.com/signin";
-// });
-// </script>
 
 
