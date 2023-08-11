@@ -10,12 +10,30 @@
     <div id="authenticate">
         <img src="/Images/Email icon.png" alt="icon">
         <p>Congratulations, your company’s code is</p>
-        <h1 id="code"> FL-124</h1>
+        <h1 id="orgCode"> </h1>
         <button type="button"><a href="/Organization/signUp/proceedToDashbord.html">Proceed</a></button>
     
     </div>
 
 
-    <script src="./signUp.js"></script>
+    <script>
+        const organizationCode = document.getElementById("orgCode");
+        const token = localStorage.token;
+
+        fetch('https://clockin-be.onrender.com/org',{
+            method: "GET",
+            headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+            Authorization: `Bearer ${token}`,
+    }
+  
+  }).then((response) => response.json())
+  .then((data) => {
+      localStorage.setItem("orgCode", data.org_code)
+    organizationCode.innerHTML = data.org_code;
+    window.location.href ="/Organization/signUp/proceedToDashbord.html"
+  })
+        
+    </script>
 </body>
 </html>

@@ -20,7 +20,12 @@ body{
     border-radius: 10px;
     /* text-align: center; */
 }
-
+#company__name{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
 #header{
     display: flex;
     justify-content: space-between;
