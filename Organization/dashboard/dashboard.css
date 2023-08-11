@@ -96,3 +96,13 @@ body{
     font-size: 25px;
     cursor: pointer;
   }
+  .attendance{
+    display: flex;
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+
+  .bx-log-in-circle{
+    font-size: 2rem;
+    cursor: pointer;
+  }
