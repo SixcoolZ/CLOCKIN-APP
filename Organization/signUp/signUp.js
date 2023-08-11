@@ -14,6 +14,7 @@ form.addEventListener("submit", function(e){
     const formInputs = e.currentTarget;
     const formData = new FormData(formInputs);
     const data = Object.fromEntries(formData.entries());
+    localStorage.setItem("password", data.password);
     
     
  
@@ -59,15 +60,15 @@ function addCompany(data){
     fetch('https://clockin-be.onrender.com/auth/signup',{
         method: "POST",
         headers: {
-      "Content-Type": "application/json",
-    //   Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json", 
     },
     body: JSON.stringify(data),
   
   })
     .then((res) => res.json())
     .then((data) => {
-        localStorage.token = data.token;
+        console.log({data})
+         localStorage.setItem("token", data.token)
         window.location.href ="/Organization/signUp/confirmation.html"
     })
 
@@ -78,11 +79,9 @@ function addCompany(data){
 
 
 
-
-
-
-
 loginOption.addEventListener("click", function(){
 
     location.href ="/Organization/signIn/signIn.html"
 })
+
+

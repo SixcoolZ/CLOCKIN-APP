@@ -29,8 +29,8 @@
   
   }).then((response) => response.json())
   .then((data) => {
+      localStorage.setItem("orgCode", data.org_code)
     organizationCode.innerHTML = data.org_code;
-    localStorage.orgCode = data.org_code;
     window.location.href ="/Organization/signUp/proceedToDashbord.html"
   })
         
