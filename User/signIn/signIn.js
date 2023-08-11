@@ -20,7 +20,7 @@ form.addEventListener("submit", function(e){
 
 
    function SignIn(data){
-    fetch("http://localhost:8080/auth/signin", {
+    fetch("https://clockin-be.onrender.com/auth/signin/", {
         method: "POST",
         headers: { "Content-Type": "application/json; charset=utf-8" },
         body: JSON.stringify(data)
