@@ -73,7 +73,7 @@ function addCompany(data){
     })
 
     .catch(error=>{
-        console.log("error message==>", error)
+        alert("error message==>", error)
     });
 }
 
