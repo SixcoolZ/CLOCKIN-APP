@@ -73,10 +73,17 @@ body{
 .icon{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #bell{
     margin-right: 15px;
+    font-size: 2rem;
+}
+
+#user{
+    margin-right: 15px;
+    font-size: 2rem;
 }
 .dashbord{
     display: flex;
