@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>company's dashboard</title>
+    <link rel="shortcut icon" href="/Images/Home-page-image.png" type="image/x-icon">
     <link rel="stylesheet" href="dashboard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -41,20 +42,36 @@
         <div id="dailySignIns">
             <h2>Sign In for Today</h2>
             <div id="displaySignIns">
-                <p>View All</p>
-                <i class='bx bx-chevron-down'></i>
+                <p class="heading">View All</p>
+                <div class='bx bx-chevron-down' id="allSignIns"></div>
+                <div class='bx bx-chevron-up' id="closeAllSignIns"></div>
+            </div>
+        </div>
+        <div class="sigIns">
+            <div class="signInsHeader">
+                <h3>Name</h3>
+                <h3>TimeIn</h3>
+                <h3>TimeOut</h3>
             </div>
         </div>
 
-        <div class="attendance">
-            <div class='bx bx-log-in-circle' id="attendance"></div>
-            <h3>Attendance</h3>
+        <div  class="attendance">
+                <div class="userAttendence">
+                    <div class='bx bx-log-in-circle' id="attendance"></div>
+                <h3 class="heading">ATTENDANCE</h3>
+                </div>
+                <div class="userAttendence">
+                    <h3 class="heading">LOGOUT</h3>
+                    <div class='bx bx-log-out-circle' id="logout"> </div>
+                    
+                </div>
+        
         </div>
     </div>
 </main>   
 
 
-
+<script src="viewAll.js"></script>
 <script src="records.js"></script>
 <script src="dashboard.js"></script>
 </body>

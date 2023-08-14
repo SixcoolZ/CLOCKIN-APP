@@ -1,3 +1,4 @@
+const signUpOption = document.getElementsByTagName("em")[0];
 const form = document.getElementById('form')
 
 form.addEventListener("submit", function(e){
@@ -41,3 +42,9 @@ form.addEventListener("submit", function(e){
 
     })
 }
+
+
+signUpOption.addEventListener("click", function(){
+
+    window.location.href ="/Organization/signUp/signUp.html"
+ })
