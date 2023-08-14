@@ -81,7 +81,7 @@ function addCompany(data){
 
 loginOption.addEventListener("click", function(){
 
-    location.href ="/Organization/signIn/signIn.html"
+   window.location.href ="/Organization/signIn/signIn.html"
 })
 
 

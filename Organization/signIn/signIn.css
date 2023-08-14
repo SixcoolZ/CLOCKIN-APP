@@ -101,6 +101,22 @@ button:hover{
     color: blue;
   }
 
+  em{
+    color: hsla(180, 100%, 25%, 1);
+    padding: .8rem;
+    font-weight: bolder;
+    cursor: pointer;
+   
+}
+em:hover{
+    background: hsl(230, 8%, 15%);
+    border-radius: 10px;
+    color: hsl(0, 4%, 90%);
+}
+.log{
+    margin-top: 1.5rem;
+}
+
   .bxl-google{
     background: linear-gradient(to right, #0000FF,
     #EA4335, #FBBC05, #34A853);

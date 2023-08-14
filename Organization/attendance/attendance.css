@@ -8,7 +8,7 @@
 }
 
 body{
-    background: hsla(0, 73%, 82%, 0.2);
+    background:hsl(180, 33%, 88%);;
 }
 
 .attendance{
@@ -63,3 +63,18 @@ body{
 #bell{
     margin-right: 15px;
 }
+.dashbord{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+}
+.bottom{
+    display: flex;
+    gap: .5rem;
+}
+
+.bottom h3{
+    font-size: 1.5rem;
+}
+

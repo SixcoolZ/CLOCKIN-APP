@@ -50,7 +50,21 @@ body{
     margin-top: 0;
 }
 
-
+p{
+  font-weight: bold;
+}
+#allSignIns{
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+}
+#closeAllSignIns{
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
   #features {
     display: grid;
@@ -92,17 +106,31 @@ body{
     display: flex;
     gap: 5px;
   }
-  #displaySignIns i{
-    font-size: 25px;
-    cursor: pointer;
+
+  .sigIns{
+    margin-top: 0.5rem;
+    display: none;
+  }
+  .signInsHeader{
+    display: flex;
+    justify-content: space-between;
   }
   .attendance{
     display: flex;
-    margin-top: 3rem;
-    gap: 1rem;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 3rem;
   }
 
-  .bx-log-in-circle{
+  .bx-log-in-circle,
+  .bx-log-out-circle{
     font-size: 2rem;
     cursor: pointer;
+  }
+  .userAttendence{
+    display: flex;
+    gap: .5rem;
+  }
+  .heading{
+    margin-top: .3rem;
   }
