@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication</title>
+    <link rel="shortcut icon" href="/Images/Home-page-image.png" type="image/x-icon">
     <link rel="stylesheet" href="./signUp.css">
 </head>
 <body>
@@ -11,12 +12,13 @@
         <img src="/Images/Email icon.png" alt="icon">
         <p>Congratulations, your company’s code is</p>
         <h1 id="orgCode"> </h1>
-        <button type="button"><a href="/Organization/signUp/proceedToDashbord.html">Proceed</a></button>
+        <button type="button" id="Proceed"><!--a href="/Organization/signUp/proceedToDashbord.html"-->Proceed</button>
     
     </div>
 
 
     <script>
+        const Proceed = document.querySelector("#Proceed");
         const organizationCode = document.getElementById("orgCode");
         const token = localStorage.token;
 
@@ -31,7 +33,10 @@
   .then((data) => {
       localStorage.setItem("orgCode", data.org_code)
     organizationCode.innerHTML = data.org_code;
-    window.location.href ="/Organization/signUp/proceedToDashbord.html"
+    Proceed.addEventListener("click", function(){
+        window.location.href ="/Organization/signUp/proceedToDashbord.html"
+    })
+   
   })
         
     </script>

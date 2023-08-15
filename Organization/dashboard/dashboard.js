@@ -1,6 +1,7 @@
 const companyId = document.getElementById("company__id");
 const companyName = document.getElementById("company__name");
 const attendance = document.getElementById("attendance");
+const logOut = document.getElementById("logout");
 // const comapanyID = localStorage.orgCode ;
 
 
@@ -26,4 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 attendance.addEventListener("click", function(){
     window.location.href ="/Organization/attendance/attendance.html"
+});
+
+logOut.addEventListener("click", ()=>{
+    window.location.href = "/Organization/signIn/signIn.html"
 })

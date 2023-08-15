@@ -27,16 +27,13 @@ form.addEventListener("submit", function(e){
     }).then((res) => res.json())
     .then(data => {
         console.log({data})
-        // localStorage.setItem("token", data.token)
+        localStorage.setItem("token", data.token)
         // localStorage.setItem("email", data.email)
         if(data.token){
             window.location.href = ("/User/dashboard/dashboard.html");
 
         }
-        else{
-            window.location.href = "/";
 
-        }
     })
 }
 
