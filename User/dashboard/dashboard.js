@@ -3,6 +3,7 @@ const signOutBtn = document.getElementById("signOutBtn");
 const logOut = document.getElementById("logout");
 const userTimeIn = document.getElementById("time-in");
 const userTimeOut = document.getElementById("time-out");
+const usersTimeINWeekly = document.getElementById("checkin-count");
 
 const token = localStorage.token;
 // let isLoggedIn = false;
@@ -29,7 +30,8 @@ if(navigator.geolocation){
       })
         .then((res) => res.json())
         .then((data) => {
-          timeInDate()
+          timeInDate();
+          usersTimeINWeekly.innerHTML = data.__v;
         //  GeolocationPosition.userLocation.coords.latitude;
         //   GeolocationPosition.userLocation.coords.longitude;
             console.log(data);
@@ -38,8 +40,8 @@ if(navigator.geolocation){
         });  
   })
   
-  //  console.log(latitude);
-  //  console.log(longitude);
+  //  console.log(latitude);6
+  //  console.log(longitude);6
   },(error) => {
     console.error(error)
   })
@@ -57,14 +59,14 @@ function timeInDate(){
         .then((res) => res.json())
         .then((data) => {
           const date = new Date(data.createdAt);
-          const hours24 = date.getHours();
-          const minutes = date.getMinutes();
+          // const hours24 = date.getHours();
+          // const minutes = date.getMinutes();
 
         // Convert to 12-hour format and determine AM/PM
-          const hours12 = hours24 > 12 ? hours24 - 12 : (hours24 === 0 ? 12 : hours24);
-          const amPm = hours24 >= 12 ? 'PM' : 'AM';
+          // const hours12 = hours24 > 12 ? hours24 - 12 : (hours24 === 0 ? 12 : hours24);
+          // const amPm = hours24 >= 12 ? 'PM' : 'AM';
 
-        userTimeIn.innerHTML = `${hours12}:${minutes < 10 ? '0' : ''}${minutes} ${amPm}`;
+        userTimeIn.innerHTML = date.toLocaleTimeString();
             console.log(data);
         }).catch(error=>{
             console.log("error message==>", error)
@@ -74,19 +76,20 @@ function timeInDate(){
 
 signOutBtn.addEventListener("click", function(){
   fetch('https://clockin-be.onrender.com/record',{
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
         Authorization: `Bearer ${token}`,
       },
-        body: JSON.stringify(data),
+        // body: JSON.stringify(data),
       })
         .then((res) => res.json())
         .then((data) => {
+          // console.log(data)
           timeOutDate()
         //  GeolocationPosition.userLocation.coords.latitude;
         //   GeolocationPosition.userLocation.coords.longitude;
-            // console.log(data);
+            console.log(data);
         }).catch(error=>{
             console.log("error message==>", error)
         });  
@@ -104,20 +107,24 @@ function timeOutDate(){
         .then((res) => res.json())
         .then((data) => {
           const date = new Date(data.updatedAt);
-          const hours24 = date.getHours();
-          const minutes = date.getMinutes();
+          // const h\ours24 = date.getHours();
+          // const minutes = date.getMinutes();
+          
 
         // Convert to 12-hour format and determine AM/PM
-          const hours12 = hours24 > 12 ? hours24 - 12 : (hours24 === 0 ? 12 : hours24);
-          const amPm = hours24 >= 12 ? 'PM' : 'AM';
+          // const hours12 = hours24 > 12 ? hours24 - 12 : (hours24 === 0 ? 12 : hours24);
+          // const amPm = hours24 >= 12 ? 'PM' : 'AM';
 
-        userTimeOut.innerHTML = `${hours12}:${minutes < 10 ? '0' : ''}${minutes} ${amPm}`;
-            console.log(data);
+        userTimeOut.innerHTML = date.toLocaleTimeString();
+            // console.log(data);
         }).catch(error=>{
             console.log("error message==>", error)
         });  
 }
+timeInDate();
+timeOutDate();
 
 logOut.addEventListener("click", function(){
+  localStorage.token = null;
   window.location.href = "/User/signIn/signIn.html"
 })

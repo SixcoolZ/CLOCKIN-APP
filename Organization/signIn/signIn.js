@@ -6,16 +6,16 @@ form.addEventListener("submit", function(e){
     const formInputs = e.currentTarget;
     const formData = new FormData(formInputs);
     const data = Object.fromEntries(formData.entries());
-    console.log({data})
+    // console.log({data})
 
-    const password = localStorage.password;
+    // const password = localStorage.password;
 
-    console.log(password)
+    // console.log(password)
 
     SignIn(data);
-    if(password.value === localStorage.password){
-    form.reset();
-    }
+    // if(password.value === localStorage.password){
+    // form.reset();
+    // }
 
     //    else{
     //     alert("input a correct password");
@@ -29,16 +29,24 @@ form.addEventListener("submit", function(e){
         body: JSON.stringify(data)
     }).then((response) => response.json())
     .then(data => {
+        console.log(data)
         // console.log(data.token)
         localStorage.setItem("token", data.token)
         let token = localStorage.getItem('token')
         // ``
         // localStorage.setItem("email", data.user.email)
-        if (token){
+        console.log(token)
+        if (data.statusCode == 400){
+            alert(data.message)
+        }else{
             window.location.href = "/Organization/dashboard/dashboard.html";
 
         }
         // localStorage.setItem("password", data.password)
+
+        // else{
+        //     alert("Input Corrent Details")
+        // }
 
     })
 }
