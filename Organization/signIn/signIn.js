@@ -6,16 +6,16 @@ form.addEventListener("submit", function(e){
     const formInputs = e.currentTarget;
     const formData = new FormData(formInputs);
     const data = Object.fromEntries(formData.entries());
-    console.log({data})
+    // console.log({data})
 
-    const password = localStorage.password;
+    // const password = localStorage.password;
 
-    console.log(password)
+    // console.log(password)
 
     SignIn(data);
-    if(password.value === localStorage.password){
-    form.reset();
-    }
+    // if(password.value === localStorage.password){
+    // form.reset();
+    // }
 
     //    else{
     //     alert("input a correct password");
@@ -39,6 +39,10 @@ form.addEventListener("submit", function(e){
 
         }
         // localStorage.setItem("password", data.password)
+
+        else{
+            alert("Input Corrent Details")
+        }
 
     })
 }
