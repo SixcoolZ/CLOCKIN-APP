@@ -10,8 +10,6 @@ form.addEventListener("submit", function(e){
 
     const password = localStorage.password;
 
-    console.log(password)
-
     SignIn(data);
     if(password.value === localStorage.password){
     form.reset();
@@ -29,12 +27,16 @@ form.addEventListener("submit", function(e){
         body: JSON.stringify(data)
     }).then((response) => response.json())
     .then(data => {
+        console.log(data)
         // console.log(data.token)
         localStorage.setItem("token", data.token)
         let token = localStorage.getItem('token')
         // ``
         // localStorage.setItem("email", data.user.email)
-        if (token){
+        console.log(token)
+        if (data.statusCode == 400){
+            alert(data.message)
+        }else{
             window.location.href = "/Organization/dashboard/dashboard.html";
 
         }

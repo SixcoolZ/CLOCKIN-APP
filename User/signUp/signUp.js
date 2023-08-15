@@ -38,6 +38,7 @@ function addUser(data){
   })
     .then((res) => res.json())
     .then((data) => {
+        localStorage.token = data.token;
         window.location.href ="/User/dashboard/dashboard.html";
     }).catch(error=>{
         console.log("error message==>", error)
