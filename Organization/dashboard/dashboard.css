@@ -110,6 +110,8 @@ p{
   .sigIns{
     margin-top: 0.5rem;
     display: none;
+    display: flex;
+    flex-direction: column;
   }
   .signInsHeader{
     display: flex;
@@ -133,4 +135,10 @@ p{
   }
   .heading{
     margin-top: .3rem;
+  }
+
+  #allNames{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
