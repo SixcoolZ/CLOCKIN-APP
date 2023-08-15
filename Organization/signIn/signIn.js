@@ -29,20 +29,24 @@ form.addEventListener("submit", function(e){
         body: JSON.stringify(data)
     }).then((response) => response.json())
     .then(data => {
+        console.log(data)
         // console.log(data.token)
         localStorage.setItem("token", data.token)
         let token = localStorage.getItem('token')
         // ``
         // localStorage.setItem("email", data.user.email)
-        if (token){
+        console.log(token)
+        if (data.statusCode == 400){
+            alert(data.message)
+        }else{
             window.location.href = "/Organization/dashboard/dashboard.html";
 
         }
         // localStorage.setItem("password", data.password)
 
-        else{
-            alert("Input Corrent Details")
-        }
+        // else{
+        //     alert("Input Corrent Details")
+        // }
 
     })
 }
