@@ -18,6 +18,7 @@ const allSignIn = document.querySelector(".sigIns")
 
 token = localStorage.token
 
+let count = 0
 fetch("https://clockin-be.onrender.com/record/all", {
     method: "GET",
     headers: {
@@ -30,10 +31,12 @@ fetch("https://clockin-be.onrender.com/record/all", {
         // console.log(data)
         data.forEach(user => {
             const all = document.createElement("div");
-            all.setAttribute("id", "allNames")
+            all.setAttribute("id", "allNames");
+            const serialNumber = document.createElement("p");
             const names = document.createElement("p");
             const timein = document.createElement("p");
             const timeOut = document.createElement("p");
+            serialNumber.innerHTML = ++count;
             names.innerHTML = user.user.name;
 
             let date = new Date(user.createdAt);
@@ -44,7 +47,7 @@ fetch("https://clockin-be.onrender.com/record/all", {
 
             timeOut.innerHTML = timeOutTime.toLocaleTimeString();
 
-            all.append(names, timein, timeOut);
+            all.append(serialNumber, names, timein, timeOut);
             allSignIn.appendChild(all)
         });
 })
