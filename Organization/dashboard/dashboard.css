@@ -141,4 +141,7 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
+    border: 3px solid hsl(180, 100%, 25%);
+    padding: .5rem;
   }
