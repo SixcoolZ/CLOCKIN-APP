@@ -34,17 +34,17 @@ form.addEventListener("submit", function(e){
                 delete data.checkbox;
                 
 
-                addCompany(data)
-          console.log(data)
+                addCompany(data);
     
             },(error)=>{
-                console.error(error)
+                 alert(`Error Code: ${error.code}  Error Message: ${error.message} \n
+                Solution:  Enable Your Location To Continue`)
             })
             
            
          
+           form.reset()
            
-            form.reset();
 
         }
     }
@@ -73,7 +73,7 @@ function addCompany(data){
     })
 
     .catch(error=>{
-        alert("error message==>", error)
+        alert("error message", error)
     });
 }
 

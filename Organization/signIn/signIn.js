@@ -42,6 +42,8 @@ form.addEventListener("submit", function(e){
             window.location.href = "/Organization/dashboard/dashboard.html";
 
         }
+
+        form.reset()
         // localStorage.setItem("password", data.password)
 
         // else{
