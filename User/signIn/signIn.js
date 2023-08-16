@@ -12,6 +12,7 @@ form.addEventListener("submit", function(e){
     }
 
     else{
+        showLoadingSpinner()
             SignIn(data)
         
     }
@@ -28,14 +29,40 @@ form.addEventListener("submit", function(e){
     .then(data => {
         console.log({data})
         localStorage.setItem("token", data.token)
+        showLoadingSpinner();
         // localStorage.setItem("email", data.email)
         if(data.token){
             window.location.href = ("/User/dashboard/dashboard.html");
 
         }
 
+    }).catch(error => { 
+        hideLoadingSpinner() 
+        alert(error.message);
+    }).finally(()=>{
+        hideLoadingSpinner
+        
     })
+    
 }
+
+
+const spinner = document.getElementById('loading-spinner');
+let btn = document.getElementById('continue');
+
+
+function showLoadingSpinner() {
+    btn.setAttribute('disabled', true)
+    spinner.style.display = 'block';
+  }
+  
+  function hideLoadingSpinner() {
+    // btn.setAttribute('disabled', false)
+    spinner.style.display = 'none';
+  }
+  
+  // Simulate some delay and then hide the spinner
+  setTimeout(hideLoadingSpinner, 3000);
 
 
 
