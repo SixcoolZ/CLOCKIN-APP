@@ -22,7 +22,10 @@
                 <label for="companyId">Company ID</label>
                 <input type="text, number" id="companyId" name="companyId" value="" placeholder="Input 5 digit code">
                 <p class="Forgotten">Forgotten password</p>
-                <button type="submit" id="continue">Login</button>
+                <div class="spin">
+                    <div id="loading-spinner" class="spinner"></div>
+                    <button type="submit" id="continue">Login</button>
+                </div>
             </form>
             <h3 class="hr-lines">or continue with</h3>
             <div class="media">
@@ -31,6 +34,11 @@
 
             </div>  
         </div>
+
+
+        <!-- <button >Show Loading Spinner</button> -->
+
+
     </main>
     <script src="./signIn.js"></script>
 </body>
