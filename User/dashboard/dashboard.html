@@ -15,7 +15,7 @@
             <div class="user-header">
                 <div class="user-heading">
                     <h2>Welcome!!!</h2>
-                    <p id="user-date">27 Aug,2023</p>
+                    <p id="user-date"></p>
                 </div>
                 <div class="user-icons">
                     <i class="fa-regular fa-bell"></i>
@@ -28,14 +28,14 @@
                         <div class="fa-solid fa-right-to-bracket" id="signInBtn"></div>
                         <p>Time In</p>
                     </div>
-                    <p class="content1-time" id="time-in"></p>
+                    <p class="content1-time" id="time-in">00:00:00</p>
                 </div>
                 <div class="user-content">
                     <div class="user-content2">
                         <div class="fa-solid fa-arrow-right-from-bracket" id="signOutBtn"></div>
                         <p>Time Out</p>
                     </div>
-                    <p class="content1-time" id="time-out"></p>
+                    <p class="content1-time" id="time-out">00:00:00</p>
                 </div>
                 <div class="user-content">
                     <p id="checkin-details">Number of Sign In this week</p>
@@ -50,8 +50,12 @@
                 <h3>Recent Activity</h3>
                 <div class="activity-details">
                     <p>See more</p>
-                    <i class="fa-solid fa-angle-down"></i>
+                    <div class="fa-solid fa-angle-down" id = "toggle"></div>
+                    <div class="fa-solid fa-angle-up" id="toggle-up"></div>
                 </div>
+            </div>
+            <div id="user-time-deatils">
+
             </div>
             <div class="user-footer">
                 <div class="user-profile">
@@ -66,5 +70,6 @@
         </div>
     </main>
     <script src="./dashboard.js"></script>
+    <script src="./trail.js"></script>
 </body>
 </html>

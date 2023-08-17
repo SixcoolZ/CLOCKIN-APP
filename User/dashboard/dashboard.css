@@ -31,6 +31,7 @@ body{
 .user-header p{
     font-size: 16px;
     font-weight: 400;
+    margin-top: 0.2rem;
 }
 .user-icons{
     margin-top: -1rem;
@@ -138,6 +139,13 @@ body{
     font-size: 16px;
     font-weight: 500;
 }
+#toggle{
+    cursor: pointer;
+}
+#toggle-up{
+    display: none;
+    cursor: pointer;
+}
 .user-footer{
     display: flex;
     justify-content: space-evenly;
@@ -165,4 +173,28 @@ body{
 .log-out{
     text-align: center;
     cursor: pointer;
+}
+
+
+.user-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.iconsDiv{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.bx-log-in, 
+.bx-log-out {
+    font-size: 2rem;
+    color: hsl(180, 100%, 25%);
+}
+.day{
+    display: flex;
+    flex-direction: column;
 }
