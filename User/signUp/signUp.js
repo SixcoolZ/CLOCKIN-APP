@@ -18,7 +18,7 @@ form.addEventListener("submit", function(e){
     }
 
     else{
-        
+        showLoadingSpinner();
         addUser(data);
         form.reset();
     }
@@ -39,10 +39,15 @@ function addUser(data){
     .then((res) => res.json())
     .then((data) => {
         localStorage.token = data.token;
+        showLoadingSpinner();
         window.location.href ="/User/dashboard/dashboard.html";
     }).catch(error=>{
-        console.log("error message==>", error)
-    });
+        hideLoadingSpinner()
+        alert(error.message);
+
+    }).finally(()=>{
+        hideLoadingSpinner();
+    })
 }
 
 
@@ -51,3 +56,17 @@ loginOption.addEventListener("click", function(){
 
     location.href ="/User/signIn/signIn.html"
 })
+
+
+const spinner = document.getElementById('loading-spinner');
+
+
+function showLoadingSpinner() {
+    signUp.setAttribute('disabled', true)
+    spinner.style.display = 'block';
+  }
+  
+  function hideLoadingSpinner() {
+    spinner.style.display = 'none';
+  }
+  
