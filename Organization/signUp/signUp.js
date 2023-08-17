@@ -33,7 +33,7 @@ form.addEventListener("submit", function(e){
                 data.role = "org";
                 delete data.checkbox;
                 
-
+                showLoadingSpinner();
                 addCompany(data);
     
             },(error)=>{
@@ -68,16 +68,38 @@ function addCompany(data){
     .then((res) => res.json())
     .then((data) => {
         console.log({data})
-         localStorage.setItem("token", data.token)
+         localStorage.setItem("token", data.token);
+         showLoadingSpinner();
         window.location.href ="/Organization/signUp/confirmation.html"
     })
 
     .catch(error=>{
-        alert("error message", error)
-    });
+        alert("error message", error);
+        hideLoadingSpinner() 
+    }).finally(()=>{
+        hideLoadingSpinner
+        
+    })
 }
 
 
+
+const spinner = document.getElementById('loading-spinner');
+let btn = document.getElementById('continue');
+
+
+function showLoadingSpinner() {
+    btn.setAttribute('disabled', true)
+    spinner.style.display = 'block';
+  }
+  
+  function hideLoadingSpinner() {
+    // btn.setAttribute('disabled', false)
+    spinner.style.display = 'none';
+  }
+  
+  // Simulate some delay and then hide the spinner
+  setTimeout(hideLoadingSpinner, 3000);
 
 loginOption.addEventListener("click", function(){
 
