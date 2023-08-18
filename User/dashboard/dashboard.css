@@ -63,13 +63,13 @@ body{
     align-items: center;
     margin-bottom: 1.5rem;
 }
-.user-content1 .fa-right-to-bracket{
+.user-content1 .bx-log-in{
     background: #ffffff;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 26px;
     padding: 0.4rem;
 }
-.user-content1 .fa-right-to-bracket:hover{
+.user-content1 .bx-log-in:hover{
     cursor: pointer;
     background-color: #B0D8D8;
     color: #ffffff;
@@ -88,13 +88,13 @@ body{
     align-items: center;
     margin-bottom: 1.5rem;
 }
-.user-content2 .fa-arrow-right-from-bracket{
+.user-content2 .bx-log-out{
     background: #ffffff;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 26px;
     padding: 0.4rem;
 }
-.user-content2 .fa-arrow-right-from-bracket:hover{
+.user-content2 .bx-log-out:hover{
     cursor: pointer;
     background-color: #B0D8D8;
     color: #ffffff;

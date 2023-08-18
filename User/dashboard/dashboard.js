@@ -35,7 +35,6 @@ if(navigator.geolocation){
         .then((res) => res.json())
         .then((data) => {
           timeInDate();
-          usersTimeINWeekly.innerHTML = data.__v;
         //  GeolocationPosition.userLocation.coords.latitude;
         //   GeolocationPosition.userLocation.coords.longitude;
             // console.log(data);
@@ -65,10 +64,10 @@ function timeInDate(){
       })
         .then((res) => res.json())
         .then((data) => {
-          const date = new Date(data[0][0].createdAt);
+          const date = new Date(data[0][0].time_in);
            
             checkInCount.textContent = data[1].numberOfTimeIns;
-            console.log(isDateWithinDay(data[0][0].createdAt));
+            console.log(isDateWithinDay(data[0][0].time_in));
             dailyDetails(data);
 
               // console.log(data[0])
@@ -98,7 +97,7 @@ signOutBtn.addEventListener("click", function(){
       })
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data)
+          console.log(data)
           timeOutDate()
         //  GeolocationPosition.userLocation.coords.latitude;
         //   GeolocationPosition.userLocation.coords.longitude;
@@ -121,7 +120,10 @@ function timeOutDate(){
       })
         .then((res) => res.json())
         .then((data) => {
-          const date = new Date(data[0][0].updatedAt);
+          console.log(data);
+          console.log(data[0][0].time_out)
+          const date = new Date(data[0][0].time_out);
+          console.log(date)
           checkOutCount.textContent = data[1].numberOfTimeOuts;
           dailyDetails(data);
           // const h\ours24 = date.getHours();
@@ -132,7 +134,7 @@ function timeOutDate(){
           // const hours12 = hours24 > 12 ? hours24 - 12 : (hours24 === 0 ? 12 : hours24);
           // const amPm = hours24 >= 12 ? 'PM' : 'AM';
 
-        userTimeOut.innerHTML = date.toLocaleTimeString();
+        userTimeOut.innerHTML = date != 'Invalid Date' ? date.toLocaleTimeString() : '00:00:00';
             // console.log(data);
         }).catch(error=>{
             console.log("error message==>", error)
@@ -191,33 +193,25 @@ signOut.textContent = "Sigin Out";
 signOutDay.setAttribute("class","day");
 
 const day = document.createElement("p");
-let date = new Date(user.createdAt);
-day.innerHTML = date.toLocaleDateString();
-
-// const date = new Date(user.createdAt);
-// day.innerHTML = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`;
+let date = new Date(user.time_in);
+day.textContent = date.toLocaleDateString();
 
 
 const dayleft = document.createElement("p");
-const dateLeft = new Date(user.updatedAt);
-dayleft.innerHTML = dateLeft.toLocaleDateString();
+let dateLeft = new Date(user.time_out);
+console.log(dateLeft)
+dayleft.textContent = dateLeft != 'Invalid Date' ? dateLeft.toLocaleDateString() : '00/00/00';
+// dayleft.textContent = dateLeft.toLocaleDateString();
 
 
 const userDetail_2 = document.createElement("div");
 const userTime = document.createElement("p");
-userTime.innerHTML = date.toLocaleTimeString();
+userTime.textContent = date.toLocaleTimeString();
 
 
 const userDetailLeft_2 = document.createElement("div");
 const userTimeLeft = document.createElement("p");
-userTimeLeft.innerHTML = date.toLocaleTimeString();
-
-
-
-
-
-
-
+userTimeLeft.textContent = date.toLocaleTimeString();
 
 
 signInDay.append(signIn, day);
@@ -237,7 +231,7 @@ userDetailsLeft.append(userDetailLeft_1, userDetailLeft_2);
 
 
 userTimeDetails.append(userDetailsRight, userDetailsLeft);
-  });
+});
 
 }
 

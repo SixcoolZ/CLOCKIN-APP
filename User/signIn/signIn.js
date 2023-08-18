@@ -27,16 +27,22 @@ form.addEventListener("submit", function(e){
         body: JSON.stringify(data)
     }).then((res) => res.json())
     .then(data => {
-        console.log({data})
-        localStorage.setItem("token", data.token)
+        // console.log({data})
+        localStorage.setItem("token", data.token);
+        let token = localStorage.getItem('token');
+        console.log(token)
         showLoadingSpinner();
         // localStorage.setItem("email", data.email)
-        if(data.token){
-            window.location.href = ("/User/dashboard/dashboard.html");
+        if(data.statusCode == 400){
+            alert(data.message);66666666666666666666666
+            window.location.href = "/User/signIn/signIn.html";
+        }else{
+            window.location.href = "/User/dashboard/dashboard.html";
 
         }
 
     }).catch(error => { 
+        // console.log(error)
         hideLoadingSpinner() 
         alert(error.message);
     }).finally(()=>{
