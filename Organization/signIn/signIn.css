@@ -141,11 +141,11 @@ em:hover{
   }
   
   .spinner {
-    border: 3rem solid #dcdcdc ;
+    border: 1rem solid #dcdcdc ;
     border-left-color: hsl(180, 100%, 25%);
     border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     animation: spin 1s linear infinite;
   }
   
