@@ -30,8 +30,8 @@ form.addEventListener("submit", function(e){
         body: JSON.stringify(data)
     }).then((response) => response.json())
     .then(data => {
-        localStorage.setItem("token", data.token)
-        let token = localStorage.getItem('token')
+        localStorage.setItem("token", data.token);
+        let token = localStorage.getItem('token');
         showLoadingSpinner();
         // localStorage.setItem("email", data.user.email)
         console.log(token)
